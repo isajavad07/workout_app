@@ -2,12 +2,18 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import axios from 'axios';
 import { FaArrowRight } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [showError, setShowError] = useState(false);
 
     const navigate = useNavigate();
+
+    const closeAlert = () => {
+        setShowError(false);
+    }
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -16,14 +22,24 @@ const Login = () => {
                 console.log(res);
                 navigate('/plans');
             })
-            .catch(err => alert("Invalid Credentials"));
-            setEmail('')
-            setPassword('')
+            .catch(err => {
+                setShowError(true);
+            });
+        setEmail('');
+        setPassword('');
     };
 
     return (
         <div className="container mx-auto my-8 p-6 bg-white rounded shadow">
             <h1 className="text-4xl font-bold mb-4">Login</h1>
+            {showError && (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+                    <span className="block sm:inline">
+                        Invalid Username or Password.
+                        <button className='bg-red-100 hover:bg-red-500 ml-5 rounded relative' onClick={closeAlert}><IoClose /></button>
+                    </span>
+                </div>
+            )}
             <form className="form-control space-y-4" onSubmit={onSubmit}>
                 <div>
                     <label htmlFor="email" className="block mb-1">Email:</label>

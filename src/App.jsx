@@ -3,7 +3,7 @@ import Layout from './components/Layout';
 import Login from './components/Login';
 import Register from './components/Register';
 import Plans from './components/Plans';
-import Room from './components/room';
+import Room from './components/Room';
 import Office from './components/Office';
 import Beach from './components/Beach';
 import Admin from './components/Admin';
