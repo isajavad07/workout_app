@@ -28,7 +28,7 @@ const Admin = () => {
 
     return (
         <>
-            <h1 className="text-4xl font-bold my-4">Administrator</h1>
+            <div className="text-4xl font-bold my-4">Administrator</div>
             <Link to="/" className="text-blue-500 hover:underline">Back to Home</Link>
             <br />
             <div className='container mx-auto my-4 bg-white p-4 border rounded'>
@@ -47,9 +47,6 @@ const Admin = () => {
                     <button type='submit' className="px-4 py-2 bg-green-900 text-white rounded hover:bg-green-600">Add workout</button>
                 </form>
                 <Link to='/view' className="text-blue-500 hover:underline">View all workouts</Link>
-            </div>
-            <div className='container mx-auto my-4'>
-                <h1 className="text-4xl font-bold">User Accounts</h1>
             </div>
         </>
     )

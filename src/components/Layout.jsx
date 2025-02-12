@@ -21,7 +21,7 @@ const Layout = () => {
             <div className="grid grid-cols-3 gap-4 justify-items-center">
                 {buttons.map(({ text, onClick }, index) => (
                     <div key={index} className="p-4 flex justify-center items-center">
-                        <button onClick={onClick} className="px-4 py-2 bg-green-600 text-white rounded hover:border-blue-500 transition duration-200">
+                        <button onClick={onClick} className="px-4 py-2 border bg-green-600 text-white rounded hover:border-blue-500 cursor-pointer transition duration-200">
                             {text}
                         </button>
                     </div>
