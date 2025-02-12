@@ -1,0 +1,24 @@
+{
+  "Workouts": [
+    {
+      "id": "5525",
+      "workout": "Pull ups",
+      "type": "Room"
+    },
+    {
+      "id": "b555",
+      "workout": "Push ups",
+      "type": "Office"
+    },
+    {
+      "id": "2a92",
+      "workout": "Bicep Extensions",
+      "type": "Beach"
+    },
+    {
+      "id": "4f8b",
+      "workout": "Desk Hangs",
+      "type": "Office"
+    }
+  ]
+}
