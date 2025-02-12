@@ -17,7 +17,7 @@ const Layout = () => {
 
     return (
         <>
-            <header className="text-4xl font-bold text-center my-4">Main Menu</header>
+            <div className="text-4xl font-bold text-center my-4">Main Menu</div>
             <div className="grid grid-cols-3 gap-4 justify-items-center">
                 {buttons.map(({ text, onClick }, index) => (
                     <div key={index} className="p-4 flex justify-center items-center">
